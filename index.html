@@ -772,36 +772,49 @@ body {
    
 
 <div class="side-panel" id="sp-education">
-  <div class="sp-head"><h3>02 · Educación — Historial Completo</h3><button class="sp-close" onclick="cerrarPaneles()">✕</button></div>
+  <div class="sp-head">
+    <h3>02 · Educación — Historial Completo</h3>
+    <button class="sp-close" onclick="cerrarPaneles()">✕</button>
+  </div>
   <div class="sp-body">
-    <div class="mini-card"><h4>Historial de Notas</h4>
-      <div class="nota-row"><span class="nota-curso">Programación Orientada a Objetos</span><span class="nota-pill np-hi">18</span></div>
-      <div class="nota-row"><span class="nota-curso">Arquitectura Web con Laravel</span><span class="nota-pill np-hi">17</span></div>
-      <div class="nota-row"><span class="nota-curso">Base de Datos Relacionales</span><span class="nota-pill np-hi">17</span></div>
-      <div class="nota-row"><span class="nota-curso">Gestión de Proyectos TI</span><span class="nota-pill np-hi">17</span></div>
-      <div class="nota-row"><span class="nota-curso">Seguridad Informática</span><span class="nota-pill np-hi">17</span></div>
-      <div class="nota-row"><span class="nota-curso">Ingeniería de Software II</span><span class="nota-pill np-ok">16</span></div>
-      <div class="nota-row"><span class="nota-curso">Sistemas Operativos</span><span class="nota-pill np-ok">16</span></div>
-      <div class="nota-row"><span class="nota-curso">Algoritmos y Estructura de Datos</span><span class="nota-pill np-ok">16</span></div>
-      <div class="nota-row"><span class="nota-curso">Redes y Comunicaciones</span><span class="nota-pill np-ok">15</span></div>
-      <div class="nota-row"><span class="nota-curso">Auditoría de TI</span><span class="nota-pill np-ok">15</span></div>
+    
+    <div class="mini-card rose">
+      <h4>Educación Universitaria</h4>
+      <p><strong>UNHEVAL</strong> · Ingeniería de Sistemas e Informática<br>
+      <strong>Ciclo:</strong> Noveno · <strong>Estado:</strong> Matriculada Regular</p>
+      
+      <div style="margin-top:10px;">
+        <button onclick="document.getElementById('u-docs').classList.toggle('show')" style="font-size:0.75rem; cursor:pointer;">Ver constancias U ▼</button>
+        <div id="u-docs" style="display:none; grid-template-columns:1fr 1fr; gap:8px; margin-top:8px;">
+          <img src="images/u-constancia-decimo.jpeg" alt="Décimo Superior">
+          <img src="images/u-constancia-matricula.jpeg" alt="Matrícula">
+        </div>
+      </div>
     </div>
-    <div class="mini-card rose"><h4>Constancia de Matrícula — 2026-I</h4><p><strong>Universidad:</strong> UNHEVAL<br><strong>Facultad:</strong> Ingeniería de Sistemas e Informática<br><strong>Ciclo:</strong> Noveno · Semestre 2026-I · 22 créditos<br><strong>Estado:</strong> Matriculada Regular</p></div>
-    <div class="mini-card lime"><h4>Constancia de Décimo Superior</h4><p>La Escuela Profesional de Ingeniería de Sistemas certifica que <strong>Merari Polino</strong> se encuentra en el <strong>Décimo Superior</strong> de su promoción — Semestre 2024-II — con promedio <strong>15.8 / 20</strong>.</p></div>
-    <div class="mini-card"><h4>Cursos por Ciclo</h4>
-      <table class="cv-table">
-        <thead><tr><th>Ciclo</th><th>Cursos</th><th>Metodología</th></tr></thead>
-        <tbody>
-          <tr><td>IX</td><td>Gestión de TI, Seminario de Tesis</td><td>PMI, PMBOK</td></tr>
-          <tr><td>VIII</td><td>Arquitectura Web, Auditoría TI</td><td>ISO 27001</td></tr>
-          <tr><td>VII</td><td>Base de Datos II, Ing. Software II</td><td>UML 2.5</td></tr>
-          <tr><td>VI</td><td>Programación Web, Base de Datos I</td><td>MVC, Laravel</td></tr>
-          <tr><td>V</td><td>POO, Algoritmos, Mat. Discreta</td><td>Java, OOP</td></tr>
-        </tbody>
-      </table>
+
+    <div class="mini-card">
+      <h4>Educación Secundaria</h4>
+      <p><strong>COAR Huánuco:</strong> 3°, 4° y 5° año (Alto Rendimiento)<br>
+      <strong>IE Nuestra Señora de las Mercedes:</strong> 1° y 2° año</p>
+      
+      <div style="margin-top:10px;">
+        <button onclick="document.getElementById('school-docs').classList.toggle('show')" style="font-size:0.75rem; cursor:pointer;">Ver certificados colegio ▼</button>
+        <div id="school-docs" style="display:none; grid-template-columns:1fr 1fr; gap:8px; margin-top:8px;">
+          <img src="images/colegio-bachiller.jpeg" alt="Bachiller">
+          <img src="images/colegio-certificado-notas.jpeg" alt="Notas Colegio">
+        </div>
+      </div>
     </div>
+
+    <div class="mini-card">
+      <h4>Historial de Notas y Cursos</h4>
+      </div>
   </div>
 </div>
+
+<style>
+  .show { display: grid !important; }
+</style>
 
 <div class="side-panel" id="sp-skills">
   <div class="sp-head"><h3>03 · Skills — Matriz Tecnológica</h3><button class="sp-close" onclick="cerrarPaneles()">✕</button></div>
