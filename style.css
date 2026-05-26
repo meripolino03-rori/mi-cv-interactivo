@@ -1,0 +1,518 @@
+/* ==========================================================================
+   Estilos Base y Normalización
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #efefef;
+  color: #111;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 34% 66%;
+  min-height: 100vh;
+}
+
+/* ==========================================================================
+   Panel Izquierdo Estático (Fijo)
+   ========================================================================== */
+.left {
+  background: #1e2d42;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 30px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#matrix-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.18;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.left-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 28px;
+  animation: fadeDown 0.8s ease both;
+}
+
+.logos img {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.logos img:hover {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+.logo-divider {
+  width: 1px;
+  height: 38px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.perfil-wrap {
+  margin-bottom: 22px;
+  animation: fadeUp 0.9s ease 0.2s both;
+}
+
+.perfil-ring {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.05));
+}
+
+.perfil {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.left h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 6px;
+  animation: fadeUp 0.9s ease 0.3s both;
+}
+
+.playlist-title {
+  letter-spacing: 4px;
+  font-size: 9px;
+  text-transform: uppercase;
+  opacity: 0.5;
+  animation: fadeUp 0.9s ease 0.4s both;
+}
+
+.line {
+  width: 80px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 18px 0;
+  animation: fadeUp 0.9s ease 0.5s both;
+}
+
+.description {
+  max-width: 230px;
+  line-height: 1.9;
+  font-size: 0.78rem;
+  opacity: 0.65;
+  font-style: italic;
+  animation: fadeUp 0.9s ease 0.6s both;
+}
+
+.icons {
+  margin-top: 24px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  animation: fadeUp 0.9s ease 0.7s both;
+}
+
+.icons a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.icons a:hover {
+  color: white;
+  transform: scale(1.2);
+}
+
+.icons a.heart {
+  color: #e05a5a;
+  font-size: 1.4rem;
+}
+
+/* ==========================================================================
+   Panel Derecho (Listas de Reproducción de Contenido)
+   ========================================================================== */
+.right {
+  background: #f0f0f0;
+  padding: 70px 65px;
+}
+
+.right h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  color: #1e2d42;
+  animation: fadeLeft 0.8s ease both;
+}
+
+.subtitle {
+  letter-spacing: 4px;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 50px;
+  animation: fadeLeft 0.8s ease 0.1s both;
+}
+
+.subtitle span {
+  margin-left: 8px;
+}
+
+/* Acordeones Interactivos */
+.accordion {
+  border-bottom: 1px solid #ddd;
+  animation: fadeLeft 0.6s ease both;
+}
+
+.accordion:nth-child(1) { animation-delay: 0.15s; }
+.accordion:nth-child(2) { animation-delay: 0.25s; }
+.accordion:nth-child(3) { animation-delay: 0.35s; }
+.accordion:nth-child(4) { animation-delay: 0.45s; }
+.accordion:nth-child(5) { animation-delay: 0.55s; }
+.accordion:nth-child(6) { animation-delay: 0.65s; }
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 22px 0;
+  transition: transform 0.25s ease;
+}
+
+.accordion-header:hover {
+  transform: translateX(5px);
+}
+
+.accordion-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.track-num {
+  font-size: 0.8rem;
+  color: #bbb;
+  min-width: 26px;
+}
+
+.accordion-left p {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #1e2d42;
+}
+
+.track-controls {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.track-controls button {
+  border: none;
+  background: none;
+  font-size: 0.95rem;
+  cursor: pointer;
+  color: #aaa;
+  transition: color 0.2s, transform 0.2s;
+  padding: 0;
+}
+
+.track-controls button:hover {
+  color: #1e2d42;
+  transform: scale(1.2);
+}
+
+.arrow {
+  font-size: 0.65rem;
+  color: #bbb;
+  transition: transform 0.35s ease, color 0.2s;
+  display: inline-block;
+}
+
+.accordion-header.open .arrow {
+  transform: rotate(180deg);
+  color: #1e2d42;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.4s ease, padding 0.4s ease;
+  padding-left: 44px;
+}
+
+.accordion-content.show {
+  max-height: 1200px;
+  opacity: 1;
+  padding-top: 4px;
+  padding-bottom: 20px;
+}
+
+.accordion-content > p,
+.accordion-content > ul li {
+  line-height: 2;
+  font-size: 0.92rem;
+  color: #555;
+}
+
+ul {
+  padding-left: 18px;
+}
+
+/* ==========================================================================
+   Secciones Desplegables Internas (Ver Más)
+   ========================================================================== */
+.ver-mas-btn {
+  margin-top: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  background: transparent;
+  border: 1.5px solid #1e2d42;
+  border-radius: 30px;
+  color: #1e2d42;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.ver-mas-btn:hover {
+  background: #1e2d42;
+  color: white;
+}
+
+.btn-arrow {
+  font-size: 0.55rem;
+  transition: transform 0.3s;
+  display: inline-block;
+}
+
+.ver-mas-btn.open .btn-arrow {
+  transform: rotate(180deg);
+}
+
+.extra-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.6s ease, opacity 0.5s ease, margin 0.4s ease;
+}
+
+.extra-content.show {
+  max-height: 1400px;
+  opacity: 1;
+  margin-top: 16px;
+}
+
+.extra-card {
+  background: white;
+  padding: 16px 20px;
+  margin-bottom: 10px;
+  border-left: 3px solid #1e2d42;
+  border-radius: 0;
+}
+
+.extra-card h4 {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #1e2d42;
+  margin-bottom: 8px;
+}
+
+.extra-card p,
+.extra-card li {
+  font-size: 0.8rem;
+  color: #666;
+  line-height: 1.8;
+}
+
+.extra-card ul {
+  padding-left: 16px;
+}
+
+.badge {
+  display: inline-block;
+  background: #e8edf3;
+  color: #1e2d42;
+  font-size: 0.72rem;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin: 3px 3px 3px 0;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   Componentes de Visualización (Barras e Indicadores Circulares)
+   ========================================================================== */
+/* Skill Bars */
+.skill-bars {
+  width: 100%;
+  margin-top: 4px;
+}
+
+.skill-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.skill-name {
+  font-size: 0.78rem;
+  color: #555;
+  min-width: 72px;
+  font-weight: 500;
+}
+
+.bar-bg {
+  flex: 1;
+  height: 6px;
+  background: #e0e0e0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  width: 0;
+  transition: width 1.2s cubic-bezier(.4, 0, .2, 1);
+}
+
+.bar-pct {
+  font-size: 0.72rem;
+  color: #999;
+  min-width: 32px;
+  text-align: right;
+}
+
+/* SVG Rings */
+.rings-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  margin-top: 8px;
+}
+
+.ring-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.ring-label-text {
+  font-size: 0.72rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.ring-pct-text {
+  font-size: 0.7rem;
+  color: #999;
+}
+
+svg.ring-svg circle {
+  fill: none;
+  stroke-width: 5;
+}
+
+.ring-track {
+  stroke: #e8e8e8;
+}
+
+.ring-prog {
+  stroke-linecap: round;
+  transform-origin: center;
+  transform: rotate(-90deg);
+  stroke-dasharray: 0 100;
+  transition: stroke-dasharray 1.4s cubic-bezier(.4, 0, .2, 1);
+}
+
+/* ==========================================================================
+   Estructuras de Animaciones del Layout
+   ========================================================================== */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* ==========================================================================
+   Reglas Adaptativas (Media Queries)
+   ========================================================================== */
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .left {
+    position: relative;
+    height: auto;
+    overflow: visible;
+  }
+  #matrix-bg {
+    display: none;
+  }
+  .right {
+    padding: 50px 28px;
+  }
+  .right h2 {
+    font-size: 2rem;
+  }
+}
