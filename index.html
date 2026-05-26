@@ -638,16 +638,6 @@ body {
   .quick-stats { grid-template-columns:1fr 1fr; }
   .rings-row { gap:18px; }
 }
-
-/* Añade esto a tu CSS si el estilo anterior no basta */
-.side-panel button {
-    background: transparent;
-    border: 1px solid var(--text-color); /* O el color que usas para bordes */
-    border-radius: 4px;
-    padding: 5px 10px;
-    cursor: pointer;
-    font-family: inherit;
-}
 </style>
 </head>
 <body>
@@ -794,12 +784,10 @@ body {
 
    <div class="mini-card">
       <h4>Educación Secundaria</h4>
-      <div class="edu-block">
-        <strong>COAR Huánuco</strong><br> 3.°, 4.° y 5.° año · Colegio de Alto Rendimiento
-      </div>
-      <div class="edu-block" style="margin-top:10px;">
-        <strong>I.E. Nuestra Señora de las Mercedes</strong><br> 1.° y 2.° año de secundaria
-      </div>
+     <p><strong>COAR Huánuco:</strong> Colegio de Alto Rendimiento<br>
+     <strong>Grados:</strong> 3.°, 4.° y 5.° año<br>
+     <strong>I.E. Nuestra Señora de las Mercedes:</strong> Educación Básica Regular<br>
+     <strong>Grados:</strong> 1.° y 2.° año</p>
       <button onclick="document.getElementById('docs-u').classList.toggle('show')" 
         class="sp-close" 
         style="width: 100%; padding: 8px; margin-bottom: 5px; font-size: 0.85rem; cursor: pointer;"> Ver documento del colegio ▼
