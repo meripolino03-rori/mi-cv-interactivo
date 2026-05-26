@@ -873,28 +873,77 @@ body {
 <script>
 /* ── DATOS ── */
 const TRACKS = [
-  {num:"01.",name:"Sobre Mí",tag:"PERFIL",tagClass:"tag-sky",panel:"sp-about",tipo:"texto",
-   resumen:"Estudiante de 9no ciclo en UNHEVAL, Décimo Superior Académico con promedio 15.8/20. Especializada en full-stack con Laravel, Vue.js y Docker. Combino análisis técnico con creatividad para construir soluciones digitales de impacto."},
-  {num:"02.",name:"Educación",tag:"ACADÉMICO",tagClass:"tag-lime",panel:"sp-education",tipo:"texto",
-   resumen:"<strong>UNHEVAL</strong> — Ingeniería de Sistemas · Noveno Ciclo · 2026-I<br>Promedio: <strong>15.8 / 20</strong> · Décimo Superior Académico"},
-  {num:"03.",name:"Habilidades",tag:"TECH",tagClass:"tag-sky",panel:"sp-skills",tipo:"skills",
-   skills:[
-     {label:"Laravel / Filament v5",pct:90,cls:"sf0"},
-     {label:"HTML5 / CSS3 / UI Design",pct:88,cls:"sf1"},
-     {label:"MySQL / Database Design",pct:72,cls:"sf2"},
-     {label:"Git / GitHub Workflow",pct:72,cls:"sf3"},
-     {label:"Docker / Contenedores",pct:60,cls:"sf4"}
-   ]},
-  {num:"04.",name:"Experiencia",tag:"LABORAL",tagClass:"tag-rose",panel:"sp-experience",tipo:"texto",
-   resumen:"Full-Stack con Laravel · Análisis UML y requerimientos · Proyectos con ISO 27001 y MAGERIT · Trabajo administrativo digital · 4+ proyectos entregados."},
-  {num:"05.",name:"Proyectos",tag:"CODE",tagClass:"tag-lime",panel:"sp-projects",tipo:"proyectos"},
-  {num:"06.",name:"Idiomas",tag:"LANGUAGES",tagClass:"tag-sky",panel:"sp-languages",tipo:"idiomas",
-   idiomas:[
-     {nombre:"Español",nivel:"Nativo · 100%",pct:100,offset:0,cls:"r0"},
-     {nombre:"Inglés",nivel:"B1 · 60%",pct:60,offset:63,cls:"r1"}
-   ]},
-  {num:"07.",name:"Contacto",tag:"CONNECT",tagClass:"tag-rose",panel:"sp-contact",tipo:"texto",
-   resumen:" meripolino@gmail.com &nbsp;·&nbsp;  linkedin.com/in/merari-polino &nbsp;·&nbsp; github.com/meripolino03-rori &nbsp;·&nbsp; Huánuco, Perú"}
+  {
+    num: "01.",
+    name: "Sobre Mí",
+    tag: "PERFIL",
+    tagClass: "tag-sky",
+    panel: "sp-about",
+    tipo: "texto",
+    resumen: "Estudiante de 9no ciclo en UNHEVAL, Décimo Superior (Promedio 15.8/20).<br>Desarrolladora Full-Stack especializada en Laravel, Vue.js y Docker.<br>Enfoque analítico en la creación de soluciones digitales de alto impacto."
+  },
+  {
+    num: "02.",
+    name: "Educación",
+    tag: "ACADÉMICO",
+    tagClass: "tag-lime",
+    panel: "sp-education",
+    tipo: "texto",
+    resumen: "<strong>UNHEVAL</strong>: Ingeniería de Sistemas e Informática | 2022-Presente<br><strong>COAR Huánuco</strong>: Secundaria de Alto Rendimiento | 2019-2021<br><strong>IE Ntra. Sra. de las Mercedes</strong>: Educación Básica | 2017-2018"
+  },
+  {
+    num: "03.",
+    name: "Habilidades",
+    tag: "TECH",
+    tagClass: "tag-sky",
+    panel: "sp-skills",
+    tipo: "skills",
+    skills: [
+      { label: "Laravel / Filament v5", pct: 90, cls: "sf0" },
+      { label: "HTML5 / CSS3 / UI Design", pct: 88, cls: "sf1" },
+      { label: "MySQL / Database Design", pct: 72, cls: "sf2" },
+      { label: "Git / GitHub Workflow", pct: 72, cls: "sf3" },
+      { label: "Docker / Contenedores", pct: 60, cls: "sf4" }
+    ]
+  },
+  {
+    num: "04.",
+    name: "Experiencia",
+    tag: "LABORAL",
+    tagClass: "tag-rose",
+    panel: "sp-experience",
+    tipo: "texto",
+    resumen: "Desarrollo Full-Stack con ecosistema Laravel · Modelado UML y requerimientos.<br>Proyectos bajo estándares ISO 27001 / MAGERIT.<br>Gestión de procesos administrativos digitales y entrega de 4+ sistemas productivos."
+  },
+  {
+    num: "05.",
+    name: "Proyectos",
+    tag: "CODE",
+    tagClass: "tag-lime",
+    panel: "sp-projects",
+    tipo: "proyectos"
+  },
+  {
+    num: "06.",
+    name: "Idiomas",
+    tag: "LANGUAGES",
+    tagClass: "tag-sky",
+    panel: "sp-languages",
+    tipo: "idiomas",
+    idiomas: [
+      { nombre: "Español", nivel: "Nativo", pct: 100, offset: 0, cls: "r0" },
+      { nombre: "Inglés", nivel: "B1 - Intermedio", pct: 60, offset: 63, cls: "r1" }
+    ]
+  },
+  {
+    num: "07.",
+    name: "Contacto",
+    tag: "CONNECT",
+    tagClass: "tag-rose",
+    panel: "sp-contact",
+    tipo: "texto",
+    resumen: "<strong>Email:</strong> meripolino@gmail.com<br><strong>LinkedIn:</strong> linkedin.com/in/merari-polino<br><strong>GitHub:</strong> github.com/meripolino03-rori"
+  }
 ];
 
 /* ── RENDER ── */
