@@ -1030,8 +1030,8 @@ function render(){
       interior += `</div>`;
     }
     if(t.panel){
-      interior += `<button class="expand-btn" onclick="abrirPanel('${t.panel}',event)"><span>Ver detalles completos</span><span class="arr">→</span></button>`;
-    }
+  interior += `<button class="expand-btn" style="width: auto; padding: 6px 16px; font-size: 0.65rem;" onclick="abrirPanel('${t.panel}',event)"><span>VER DETALLES</span><span class="arr">→</span></button>`;
+}
     list.innerHTML += `
       <div class="track">
         <div class="track-header" onclick="toggleTrack(this)">
