@@ -779,15 +779,29 @@ body {
     
     <div class="mini-card">
       <h4>Perfil Académico</h4>
-      <p>Estudiante de 9no ciclo de Ingeniería de Sistemas. Enfocada en desarrollo Full-Stack, calidad de software y gestión de proyectos bajo estándares internacionales.</p>
+      <p>Estudiante de noveno ciclo de Ingeniería de Sistemas con enfoque en desarrollo Full-Stack, calidad de software y gestión de proyectos tecnológicos. Interesada en arquitectura web, automatización y despliegue de aplicaciones utilizando tecnologías modernas y estándares internacionales.</p>
+    </div>
+
+   <div class="mini-card">
+      <h4>Educación Secundaria</h4>
+      <p><strong>IE Nuestra Señora de las Mercedes:</strong> 1° y 2° año</p>
+      <p><strong>COAR Huánuco:</strong> 3°, 4° y 5° año (Colegio de Alto Rendimiento)</p>
+      <button onclick="document.getElementById('docs-school').classList.toggle('show')" style="cursor:pointer; background:none; border:1px solid #ccc; padding:2px 8px; font-size:0.7rem; border-radius:4px; color:inherit;">Ver documentos escolares ▼</button> 
+      <div id="docs-school" style="display:none; grid-template-columns:1fr 1fr; gap:5px; margin-top:5px;">
+        <img src="colegio-bachiller.jpeg" style="width:100%; border-radius:4px;"><img src="colegio-certificado-notas.jpeg" style="width:100%; border-radius:4px;">
+      </div>
     </div>
 
     <div class="mini-card rose">
       <h4>Educación Universitaria</h4>
-      <p><strong>UNHEVAL</strong> · Ingeniería de Sistemas e Informática<br>
-      <strong>Ciclo:</strong> Noveno · <strong>Estado:</strong> Matriculada Regular</p>
+      <p><strong>UNHEVAL</strong> · Universidad Nacional Hermilio Valdiza<br>
+      <strong>Facultad:</strong> Facultad de Ingenieria Industrial, de Sistemas y Mecatrónica<br>
+      <strong>Escuela:</strong> Ingenieria de Sistemas y Mecatrónica<br>
+      <strong>Ciclo:</strong> Noveno<br>
+      <strong>Estado:</strong> Matriculada Regular</p>
       
-      <button class="nota-pill np-hi" onclick="document.getElementById('docs-u').classList.toggle('show')" style="cursor:pointer; border:none; width:100%; margin-top:5px;">Ver constancias U ▼</button>
+      <button onclick="document.getElementById('docs-u').classList.toggle('show')" style="cursor:pointer; background:none; border:1px solid #ccc; padding:2px 8px; font-size:0.7rem; border-radius:4px; color:inherit;">Ver constancias U ▼</button>
+      
       <div id="docs-u" style="display:none; grid-template-columns:1fr 1fr; gap:5px; margin-top:5px;">
         <img src="u-constancia-decimo.jpeg" style="width:100%; border-radius:4px;"><img src="u-constancia-matricula.jpeg" style="width:100%; border-radius:4px;">
       </div>
@@ -805,17 +819,6 @@ body {
       <div class="nota-row"><span class="nota-curso">Algoritmos y Estructura de Datos</span><span class="nota-pill np-ok">16</span></div>
       <div class="nota-row"><span class="nota-curso">Redes y Comunicaciones</span><span class="nota-pill np-ok">15</span></div>
       <div class="nota-row"><span class="nota-curso">Auditoría de TI</span><span class="nota-pill np-ok">15</span></div>
-    </div>
-
-    <div class="mini-card">
-      <h4>Educación Secundaria</h4>
-      <p><strong>COAR Huánuco:</strong> 3°, 4° y 5° año (Alto Rendimiento)</p>
-      <p><strong>IE Nuestra Señora de las Mercedes:</strong> 1° y 2° año</p>
-      
-      <button class="nota-pill np-ok" onclick="document.getElementById('docs-school').classList.toggle('show')" style="cursor:pointer; border:none; width:100%; margin-top:5px;">Ver documentos escolares ▼</button>
-      <div id="docs-school" style="display:none; grid-template-columns:1fr 1fr; gap:5px; margin-top:5px;">
-        <img src="colegio-bachiller.jpeg" style="width:100%; border-radius:4px;"><img src="colegio-certificado-notas.jpeg" style="width:100%; border-radius:4px;">
-      </div>
     </div>
 
     <div class="mini-card"><h4>Formación Técnica por Ciclo</h4>
@@ -836,7 +839,6 @@ body {
 <style>
   .show { display: grid !important; }
 </style>
-
 
 
 
