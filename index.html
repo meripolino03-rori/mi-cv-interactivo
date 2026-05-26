@@ -638,6 +638,16 @@ body {
   .quick-stats { grid-template-columns:1fr 1fr; }
   .rings-row { gap:18px; }
 }
+
+/* Añade esto a tu CSS si el estilo anterior no basta */
+.side-panel button {
+    background: transparent;
+    border: 1px solid var(--text-color); /* O el color que usas para bordes */
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-family: inherit;
+}
 </style>
 </head>
 <body>
@@ -784,9 +794,16 @@ body {
 
    <div class="mini-card">
       <h4>Educación Secundaria</h4>
-      <p><strong>IE Nuestra Señora de las Mercedes:</strong> 1° y 2° año</p>
-      <p><strong>COAR Huánuco:</strong> 3°, 4° y 5° año (Colegio de Alto Rendimiento)</p>
-      <button onclick="document.getElementById('docs-school').classList.toggle('show')" style="cursor:pointer; background:none; border:1px solid #ccc; padding:2px 8px; font-size:0.7rem; border-radius:4px; color:inherit;">Ver documentos escolares ▼</button> 
+      <div class="edu-block">
+        <strong>COAR Huánuco</strong><br> 3.°, 4.° y 5.° año · Colegio de Alto Rendimiento
+      </div>
+      <div class="edu-block" style="margin-top:10px;">
+        <strong>I.E. Nuestra Señora de las Mercedes</strong><br> 1.° y 2.° año de secundaria
+      </div>
+      <button onclick="document.getElementById('docs-u').classList.toggle('show')" 
+        class="sp-close" 
+        style="width: 100%; padding: 8px; margin-bottom: 5px; font-size: 0.85rem; cursor: pointer;"> Ver documento del colegio ▼
+      </button>
       <div id="docs-school" style="display:none; grid-template-columns:1fr 1fr; gap:5px; margin-top:5px;">
         <img src="images/colegio-bachiller.jpeg" style="width:100%; border-radius:4px;"><img src="images/colegio-certificado-notas.jpeg" style="width:100%; border-radius:4px;">
       </div>
@@ -794,14 +811,17 @@ body {
 
     <div class="mini-card rose">
       <h4>Educación Universitaria</h4>
-      <p><strong>UNHEVAL</strong> · Universidad Nacional Hermilio Valdiza<br>
+      <p><strong>UNHEVAL:</strong>Universidad Nacional Hermilio Valdiza<br>
       <strong>Facultad:</strong> Facultad de Ingenieria Industrial, de Sistemas y Mecatrónica<br>
       <strong>Escuela:</strong> Ingenieria de Sistemas y Mecatrónica<br>
       <strong>Ciclo:</strong> Noveno<br>
       <strong>Estado:</strong> Matriculada Regular</p>
       
-      <button onclick="document.getElementById('docs-u').classList.toggle('show')" style="cursor:pointer; background:none; border:1px solid #ccc; padding:2px 8px; font-size:0.7rem; border-radius:4px; color:inherit;">Ver constancias U ▼</button>
-      
+      <button onclick="document.getElementById('docs-u').classList.toggle('show')" 
+        class="sp-close" 
+        style="width: 100%; padding: 8px; margin-bottom: 5px; font-size: 0.85rem; cursor: pointer;"> Ver constancias ▼
+      </button>
+       
       <div id="docs-u" style="display:none; grid-template-columns:1fr 1fr; gap:5px; margin-top:5px;">
         <img src="images/u-constancia-decimo.jpeg" style="width:100%; border-radius:4px;"><img src="images/u-constancia-matricula.jpeg" style="width:100%; border-radius:4px;">
       </div>
